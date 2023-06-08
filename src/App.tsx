@@ -1,9 +1,11 @@
-import RecoilSet from "./components/RecoilSet";
+import RecoilSet from './components/RecoilSet';
+import DND from './components/DND';
 
 function App() {
   return (
     <>
-      <RecoilSet />
+      {/*<RecoilSet />*/}
+      <DND />
     </>
   );
 }

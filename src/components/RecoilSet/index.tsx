@@ -10,6 +10,7 @@ const RecoilSet = () => {
     console.log(e.currentTarget.value);
     console.log(typeof e.currentTarget.value);
     // setMinutes(parseInt(e.currentTarget.value));
+    console.log("123");
     setMinutes(Number(e.currentTarget.value));
   };
 

@@ -11,6 +11,5 @@ module.exports = {
   plugins: ['react-refresh'],
   rules: {
     'no-unused-vars': 'off',
-
   },
 }

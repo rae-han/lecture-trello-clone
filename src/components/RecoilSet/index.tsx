@@ -4,10 +4,17 @@ import { ChangeEventHandler } from "react";
 
 const RecoilSet = () => {
   const [minutes, setMinutes] = useRecoilState(minuteState);
-  const hours = useRecoilValue(hourSelector);
+  const [hours, setHours] = useRecoilState(hourSelector);
 
   const onMinutesChange: ChangeEventHandler<HTMLInputElement> = (e) => {
-    setMinutes(parseInt(e.currentTarget.value, 10));
+    console.log(e.currentTarget.value);
+    console.log(typeof e.currentTarget.value);
+    // setMinutes(parseInt(e.currentTarget.value));
+    setMinutes(Number(e.currentTarget.value));
+  };
+
+  const onHoursChange: ChangeEventHandler<HTMLInputElement> = (e) => {
+    setHours(Number(e.currentTarget.value));
   };
 
   return (
@@ -18,7 +25,12 @@ const RecoilSet = () => {
         type="number"
         placeholder="Hours"
       />
-      <input type="number" value={hours} placeholder="Minutes" />
+      <input
+        type="number"
+        value={hours}
+        onChange={onHoursChange}
+        placeholder="Minutes"
+      />
     </div>
   );
 };

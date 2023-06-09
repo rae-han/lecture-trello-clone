@@ -1,8 +1,6 @@
-import RecoilSet from './components/RecoilSet';
-import DND from './components/DND';
-
 import './styles/reset.css';
 import { createGlobalStyle } from 'styled-components';
+import Animations from './components/Animations';
 
 const GlobalStyle = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400&display=swap');
@@ -13,7 +11,8 @@ const GlobalStyle = createGlobalStyle`
   
   body {
     font-family: 'Noto Sans KR', sans-serif;
-    background-color: ${(props) => props.theme.bgColor};
+    //background-color: ${(props) => props.theme.bgColor};
+    background: linear-gradient(180deg, #747bff, #535bf2);
     color: black;
   }
   
@@ -26,8 +25,8 @@ const GlobalStyle = createGlobalStyle`
 function App() {
   return (
     <>
-      {/*<RecoilSet />*/}
-      <DND />
+      <GlobalStyle />
+      <Animations />
     </>
   );
 }

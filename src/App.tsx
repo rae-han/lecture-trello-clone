@@ -1,10 +1,9 @@
 import './styles/reset.css';
 import { createGlobalStyle } from 'styled-components';
+
 import Animations from './components/Animations';
 
-const GlobalStyle = createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400&display=swap');
-
+const GlobalStyle = createGlobalStyle`  
   * {
     box-sizing: border-box;
   }
